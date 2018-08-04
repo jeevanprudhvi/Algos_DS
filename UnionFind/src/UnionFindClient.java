@@ -7,7 +7,8 @@ public class UnionFindClient {
     private static final Scanner scanner = new Scanner(System.in);
     public static void main(String[] args){
         int N = scanner.nextInt();
-        QuickFindUF uf = new QuickFindUF(N);
+//        QuickFindUF uf = new QuickFindUF(N);
+        QuickUnionUF uf = new QuickUnionUF(N);
         while(true){
             int p = scanner.nextInt();
             int q = scanner.nextInt();
