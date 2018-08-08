@@ -8,7 +8,8 @@ public class UnionFindClient {
     public static void main(String[] args){
         int N = scanner.nextInt();
 //        QuickFindUF uf = new QuickFindUF(N);
-        QuickUnionUF uf = new QuickUnionUF(N);
+//        QuickUnionUF uf = new QuickUnionUF(N);
+          QuickUnionWeight uf = new QuickUnionWeight(N);
         while(true){
             int p = scanner.nextInt();
             int q = scanner.nextInt();
