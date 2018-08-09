@@ -9,7 +9,8 @@ public class UnionFindClient {
         int N = scanner.nextInt();
 //        QuickFindUF uf = new QuickFindUF(N);
 //        QuickUnionUF uf = new QuickUnionUF(N);
-          QuickUnionWeight uf = new QuickUnionWeight(N);
+//        QuickUnionWeight uf = new QuickUnionWeight(N);
+          QuickUnionPathCompression uf = new QuickUnionPathCompression(N);
         while(true){
             int p = scanner.nextInt();
             int q = scanner.nextInt();
