@@ -1,5 +1,11 @@
 /**
  * Created by jstadiko on 2018-08-09.
+ * Union-find with specific canonical element.
+ * Add a method find() to the union-find data type
+ * so that find(i) returns the largest element in the connected component containing i.
+ * The operations, union(), connected(), and find() should all take logarithmic time or better.
+ * For example, if one of the connected components is {1,2,6,9},
+ * then the find() method should return 9 for each of the four elements in the connected components.
  */
 public class QuickUnionPathCompression {
     private int a[], s[];
@@ -16,10 +22,10 @@ public class QuickUnionPathCompression {
     }
 
     public int root(int x){
-        int rootOfX = a[x];
-        if(rootOfX == x) return x;
+        int parentOfX = a[x];
+        if(parentOfX == x) return x;
         a[x] = root(a[x]);
-        return root(rootOfX);
+        return root(parentOfX);
     }
 
     public void union(int p, int q){

@@ -10,9 +10,9 @@ public class QuickUnionUF {
     }
 
     private int root(int x){
-        int rootOfX = a[x];
-        if(rootOfX == x) return x;
-        return root(rootOfX);
+        int parentOfX = a[x];
+        if(parentOfX == x) return x;
+        return root(parentOfX);
     }
 
     public boolean connected(int p, int q){
