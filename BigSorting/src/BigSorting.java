@@ -1,5 +1,4 @@
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -14,13 +13,7 @@ public class BigSorting {
         Arrays.sort(unsorted, (String a, String b) -> {
             if(a.length()>b.length()) return 1;
             else if(a.length()<b.length()) return -1;
-            else{
-                for(int i=0; i< b.length(); i++){
-                    if((int)a.charAt(i) > (int)b.charAt(i)) return 1;
-                    else if ((int)a.charAt(i) < (int)b.charAt(i)) return -1;
-                }
-                return 0;
-            }
+            return a.compareTo(b);
         });
         return unsorted;
     }
@@ -38,6 +31,8 @@ public class BigSorting {
 
         String[] result = sort(unsorted);
         System.out.print(Arrays.toString(result));
+        for(int i=0; i< n; i++)
+            System.out.println(unsorted[i]);
         scanner.close();
     }
 }
