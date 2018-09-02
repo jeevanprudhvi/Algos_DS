@@ -12,15 +12,11 @@ public class LinkedStackOfStrings {
     }
 
     public void push(String data){
-        Node temp = new Node();
-        temp.data = data;
+        Node oldNode = first;
+        first = new Node();
+        first.data = data;
         ++size;
-        if(first == null){
-            first = temp;
-            return;
-        }
-        temp.next = first;
-        first = temp;
+        first.next = oldNode;
     }
 
     public String pop(){
